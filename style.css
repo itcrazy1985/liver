@@ -14,12 +14,12 @@ body {
 /* Love Container */
 .love-container {
     position: relative;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px; /* Space for arrow button */
+    width: 240px; /* Slightly larger than heart */
+    height: 240px; /* To avoid cutting shadow */
+    margin-bottom: 20px;
+    overflow: visible; /* Ensures shadow is visible */
 }
 
-/* Heart Shape */
 .love {
     position: absolute;
     top: 50%;
@@ -29,18 +29,19 @@ body {
     background: red;
     transform: translate(-50%, -50%) rotate(-45deg);
     animation: float 3s infinite ease-in-out;
-    box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.7);
+    box-shadow: 0px 15px 30px rgba(255, 0, 0, 0.7); /* Increase spread */
 }
 
-/* Rounded Parts of the Heart */
+/* Rounded tops to complete the heart shape */
 .love::before,
 .love::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 140px;
     height: 140px;
     background: red;
     border-radius: 50%;
+    box-shadow: inherit; /* Ensures shadow applies to rounded parts */
 }
 
 .love::before {
@@ -52,6 +53,7 @@ body {
     left: 70px;
     top: 0;
 }
+
 
 /* Floating Animation */
 @keyframes float {
