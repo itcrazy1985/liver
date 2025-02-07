@@ -98,13 +98,19 @@ body {
     transform: translateY(5px);
 }
 
-.btn{
- margin-top: 30px;
- padding: 10px 20px;
- border-radius: 30px;
- background-color: red;
- color: white;
- font-family: italic;
- font-weight: 700;
- box-shadow: 2px 3px 5px rgb(240, 6, 6);
+.btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+  font-family: italic;
+  font-weight: 700;
+  box-shadow: 2px 3px 5px rgb(240, 6, 6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 6px 10px rgb(240, 6, 6);
 }
